@@ -1,8 +1,10 @@
 
+
+There are three application in this project.
+
 *   [FireHose for mongoDB](#FireHose for mongoDB)
 *   [FFT Flask ](#FFT Flask )
 *   [FFT Jupyter Kernel Gateway](#FFT Jupyter Kernel Gateway) 
-
 
 
 # FireHose for mongoDB
@@ -11,6 +13,9 @@
 Fetch mongodb data and post to the api server.
 #
 ## Usage:
+
+### Execute directely
+
 ```
 python NTUST_Motor_Vibration_Firehose_Para.py [-h] [-m MACHINE] [-d DATABASE]
                                               [-u USER] [-p PASSWORD]
@@ -19,7 +24,9 @@ python NTUST_Motor_Vibration_Firehose_Para.py [-h] [-m MACHINE] [-d DATABASE]
                                               [-b BEGIN] [-n END]
                                               [-i INTERVAL]
 ```
-### optional arguments:
+
+
+#### optional arguments:
 ```
   -h, --help            show this help message and exit
   -m MACHINE, --machine MACHINE
@@ -43,17 +50,29 @@ python NTUST_Motor_Vibration_Firehose_Para.py [-h] [-m MACHINE] [-d DATABASE]
                         Send time interval (second)
 ```
 
+### Zip and Push to cf
+```
+zip NTUST_Motor_Vibration_Firehose NTUST_Motor_Vibration_Firehose_Para.py Procfile requirements.txt logging.ini manifest.yml
+```
+
 # FFT Flask 
 
 ## Purpose: 
 Flask compute FFT and post next the api server.
 
 ## Program Path
-fft/
+In directory [fft/](https://github.com/benchuang11046/Motor_Vibration_Project/tree/master/fft)
 
 ## Usage:
+
+### Execute directely
 ```
 python  NTUST_fft.py
+```
+
+### Zip and Push to cf
+```
+zip fft .fft/*
 ```
 
 ### API content 
@@ -85,6 +104,8 @@ Jupyter kernel gateway compute FFT and post next the api server.
 (ISSUE: hanged in 30 minutes on CF)
 
 ## Usage:
+
+### Execute directely
 ```
  jupyter-kernelgateway --KernelGatewayApp.port=9090 --KernelGatewayApp.ip='0.0.0.0' --KernelGatewayApp.api=notebook-http --KernelGatewayApp.seed_uri='NTUST_Motor_Vibration_FFT.ipynb' --NotebookHTTPPersonality.static_path='./results'
  ```
