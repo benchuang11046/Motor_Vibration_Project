@@ -1,0 +1,14 @@
+---
+applications:
+- name: cf-service-rabbitmq-metering-VERSION
+  version: VERSION
+  buildpack: python_buildpack
+  memory: 512MB
+  no-route: true
+  health-check-type: process
+  path: ./
+  env:
+    USER: username
+    PASSWORD: password
+    API_ENDPOINT: api.example-cf.com
+    SERVICE_NAME: p-rabbitmq

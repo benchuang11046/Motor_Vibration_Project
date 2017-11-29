@@ -1,4 +1,3 @@
-
 [FireHose for mongoDB](#FireHose for mongoDB)
 
 [FFT Jupyter Kernel Gateway](#FFT Jupyter Kernel Gateway)
@@ -17,7 +16,7 @@ python NTUST_Motor_Vibration_Firehose_Para.py [-h] [-m MACHINE] [-d DATABASE]
                                               [-b BEGIN] [-n END]
                                               [-i INTERVAL]
 ```
-###optional arguments:
+### optional arguments:
 ```
   -h, --help            show this help message and exit
   -m MACHINE, --machine MACHINE
