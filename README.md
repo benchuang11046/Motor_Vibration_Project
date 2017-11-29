@@ -1,6 +1,9 @@
-[FireHose for mongoDB](#FireHose for mongoDB)
 
-[FFT Jupyter Kernel Gateway](#FFT Jupyter Kernel Gateway)
+*   [FireHose for mongoDB](#FireHose for mongoDB)
+*   [FFT Flask ](#FFT Flask )
+*   [FFT Jupyter Kernel Gateway](#FFT Jupyter Kernel Gateway) 
+
+
 
 # FireHose for mongoDB
 
@@ -40,13 +43,46 @@ python NTUST_Motor_Vibration_Firehose_Para.py [-h] [-m MACHINE] [-d DATABASE]
                         Send time interval (second)
 ```
 
-
-
-# FFT Jupyter Kernel Gateway
-
+# FFT Flask 
 
 ## Purpose: 
-jupyter kernel gateway compute FFT and post next the api server.
+Flask compute FFT and post next the api server.
+
+## Program Path
+fft/
+
+## Usage:
+```
+python  NTUST_fft.py
+```
+
+### API content 
+```
+URI: https://532735e7-98aa-4aea-a93b-8ad3d84f4eec-NTUST-Motor-FFT-dev.iii-cflab.com
+Method: POST
+POST body:
+{
+	"Machine_ID": "A",
+	"Time": "0",
+	"V1": [10, 10, 10, 10],
+	"V2": [10, 10, 10, 10],
+	"V3": [10, 10, 10, 10],
+	"I1": [10, 10, 10, 10],
+	"I2": [10, 10, 10, 10],
+	"I3": [10, 10, 10, 10],
+	"A1": [10, 10, 10, 10],
+	"A2": [10, 10, 10, 10],
+	"A3": [10, 10, 10, 10]
+}
+```
+
+
+
+# FFT Jupyter Kernel Gateway 
+
+## Purpose: 
+Jupyter kernel gateway compute FFT and post next the api server.
+(ISSUE: hanged in 30 minutes on CF)
 
 ## Usage:
 ```

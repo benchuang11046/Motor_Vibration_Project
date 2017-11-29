@@ -1,0 +1,8 @@
+---
+applications:
+- name: NTUST_fft
+  memory: 4096MB
+  disk_quota: 2048MB
+  random-route: true
+  buildpack: python_buildpack
+  command: python NTUST_fft.py

@@ -57,7 +57,7 @@ def main():
                         help='MongoDB collection name')
     parser.add_argument('-e', '--postfe', default="https://532735e7-98aa-4aea-a93b-8ad3d84f4eec-NTUST-Motor-FFT-dev.iii-cflab.com",
                         help='Post feature extraction post url')
-    parser.add_argument('-y', '--postclassify', default="http://cf-json-matching.iii-cflab.com/firehouse_post",
+    parser.add_argument('-y', '--postclassify', default="http://cf-json-matching.iii-cflab.com/firehose_post",
                         help='Post classifier post url')
     parser.add_argument('-b', '--begin', default=0,
                         help='Begin timestamp')
@@ -75,8 +75,8 @@ def main():
     collection = args.collection
     feature_extraction_post_url = args.postfe
     classifier_post_url = args.postclassify
-    begin_timestamp = args.begin
-    end_timestamp = args.end
+    begin_timestamp = int(args.begin)
+    end_timestamp = int(args.end)
     interval = args.interval
     logger.info(args)
 
