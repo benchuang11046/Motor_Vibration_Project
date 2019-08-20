@@ -2,9 +2,9 @@
 
 There are three application in this project.
 
-*   [FireHose for mongoDB](#FireHose for mongoDB)
-*   [FFT Flask ](#FFT Flask )
-*   [FFT Jupyter Kernel Gateway](#FFT Jupyter Kernel Gateway) 
+*   FireHose for mongoDB
+*   FFT Flask
+*   FFT Jupyter Kernel Gateway
 
 
 # FireHose for mongoDB
